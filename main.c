@@ -24,8 +24,13 @@ printf("Pressing R TRIGGER will say 'Your the best.'\n");
 printf("Pressing L TRIGGER will say 'Beleve in yourself.'\n");
 printf("Pressing TRIANGLE will say 'You can do it.'\n");
 printf("Pressing SQUARE will say 'Someone will love you soon.'\n");
-printf("Pressing CIRCLE will clear the screen (including this guide)\n");
+  //v2 additions
+printf("Pressing LEFT will say 'You have the most beautiful smile'\n");
+printf("Pressing RIGHT will say 'Your kindness shines like the sun'\n");
+printf("Pressing UP will say 'Love makes life worth living'\n");
+printf("Pressing DOWN will say 'The light of hope is born within oneself'\n");
 
+printf("Pressing CIRCLE will clear the screen (including this guide)\n");
   while (1) {
     sceCtrlPeekBufferPositive(0, &pad, 1);
 
@@ -38,6 +43,12 @@ printf("Pressing CIRCLE will clear the screen (including this guide)\n");
    if (pressed_buttons & SCE_CTRL_RTRIGGER) { printf("Beleve in yourself.\n"); }
    if (pressed_buttons & SCE_CTRL_TRIANGLE) { printf("You can do it.\n"); }
    if (pressed_buttons & SCE_CTRL_SQUARE) { printf("Someone will love you soon.\n"); }
+   //v2 additions
+   if (pressed_buttons & SCE_CTRL_LEFT ) { printf("You have the most beautiful smile.\n"); }
+   if (pressed_buttons & SCE_CTRL_RIGHT ) { printf("Your kindness shines like the sun.\n"); }
+   if (pressed_buttons & SCE_CTRL_UP ) { printf("Love makes life worth living.\n"); }
+   if (pressed_buttons & SCE_CTRL_DOWN ) { printf("The light of hope is born within oneself.\n"); }
+   
    if (pressed_buttons & SCE_CTRL_CIRCLE) { psvDebugScreenClear(0x00000000); }
 
    sel = 0;
@@ -45,4 +56,5 @@ printf("Pressing CIRCLE will clear the screen (including this guide)\n");
   }
 
 }
+
 

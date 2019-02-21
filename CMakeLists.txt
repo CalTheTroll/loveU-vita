@@ -13,7 +13,7 @@ include("${VITASDK}/share/vita.cmake" REQUIRED)
 
 set(PROJECT_TITLE "LOVEU")
 set(TITLE_ID "LOVEU4444")
-set(VITA_VERSION  "01.00")
+set(VITA_VERSION  "02.00")
 
 set(CMAKE_C_COMPILER "arm-vita-eabi-gcc")
 set(CMAKE_CXX_COMPILER "arm-vita-eabi-g++")
